@@ -1,0 +1,332 @@
+@text-color: #D3DBE0;
+@form-bg-color: #0C202E;
+@body-bg-color: #0A1A26;
+@fields-bg-color: #263845;
+@languages-bg-color: #142836;
+@h1-bg-color: #FFFFFF;
+
+@font-single: Roboto, sans-serif;
+
+body {
+  margin: 0;
+  background: @body-bg-color;
+  width: 100%;
+}
+
+.bottom__img {
+  background: url(images/grid_ce-orange.png) no-repeat;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  height: 249px;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  min-width: 1366px;
+  min-height: 700px;
+  margin-left: 108px;
+}
+
+.languages {
+  z-index: 3;
+  position: relative;
+  width: 128px;
+  height: 32px;
+  display: flex;
+  margin: 24px 30px 0 auto;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: @languages-bg-color;
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    margin-top: 8px;
+  }
+
+  &__icon,
+  &__english:hover {
+    cursor: pointer;
+  }
+
+  &__english {
+    font-family: @font-single;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 8px 55px 8px 8px;
+    color: #79838A;
+  }
+
+}
+
+
+.form {
+  z-index: 2;
+  margin: 80px 238px 0 184px;
+  min-height: 480px;
+  min-width: 456px;
+  max-height: 480px;
+  max-width: 456px;
+  background: @form-bg-color;
+  border-radius: 4px;
+
+  &__text {
+    font-family: @font-single;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: @h1-bg-color;
+    margin: 28px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  &__field-login,
+  &__field-device-name,
+  &__field-password,
+  &__field-button {
+    padding: 16px 50px 16px 12px;
+    margin: 60px 28px 0 28px;
+
+    display: flex;
+
+    height: 48px;
+    min-width: 400px;
+    max-width: 400px;
+
+    box-sizing: border-box;
+    border: none;
+    background: @fields-bg-color;
+    border-radius: 4px;
+    font-family: @font-single;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: @text-color;
+  }
+
+  &__field-login {
+    margin: 56px 28px 0 28px;
+  }
+}
+
+
+.field-button {
+  user-select: none;
+  margin: 36px 28px 0 28px;
+  padding: 15px 12px 17px 12px;
+  background: linear-gradient(281.74deg, #FCA501 0%, #F76F1A 100%);
+
+  &__text {
+    margin: 0;
+    box-sizing: border-box;
+    min-width: 100%;
+    font-family: @font-single;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+}
+
+
+.form {
+  &__text-login,
+  &__text-device-name,
+  &__text-password {
+    position: absolute;
+    margin: 34px 0 0 28px;
+
+    font-family: @font-single;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: @text-color;
+  }
+
+  &__show-password {
+    min-width: 400px;
+    height: 0px;
+    position: absolute;
+    text-align: right;
+    margin-left: 10px;
+    margin-top: 70px;
+    z-index: 0;
+  }
+
+  &__show-password img:hover {
+    cursor: pointer;
+  }
+
+  &__text-login {
+    margin: 2px 0 8px 28px;
+  }
+}
+
+
+.text-block {
+  margin-top: 72px;
+  min-width: 380px;
+  height: 40px;
+
+  &__logo {
+    width: 180px;
+    height: 40px;
+  }
+
+  &__logo:hover {
+    cursor: pointer;
+  }
+}
+
+
+h1 {
+  margin-top: 92px;
+  font-family: @font-single;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  color: @h1-bg-color;
+}
+
+h2 {
+  font-family: @font-single;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  color: @text-color;
+}
+
+.stores {
+  margin-top: 40px;
+  display: flex;
+
+  &__App {
+    margin-left: 40px;
+  }
+
+  & p {
+    min-width: 90px;
+    max-width: 80px;
+    font-family: @font-single;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 150%;
+    display: flex;
+    color: @text-color;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px dashed @text-color;
+  }
+
+  & p:hover {
+    cursor: pointer;
+  }
+}
+
+
+.field-button:hover {
+  cursor: pointer;
+  background: #F76F1A;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+
+  .text-block {
+    min-width: 80%;
+    padding: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 46px;
+  }
+
+  .form {
+    min-width: 110%;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__field-login,
+    &__field-device-name,
+    &__field-password,
+    &__field-button,
+    &__field-button,
+    &__text-login,
+    &__text-device-name,
+    &__text-password {
+      margin-left: 10%;
+      width: 100%;
+      min-width: 80%;
+    }
+
+    &__show-password {
+      min-width: 100%;
+      margin-left: -20px;
+    }
+  }
+
+
+  .field-button__text {
+    width: 100%;
+    min-width: 100%;
+  }
+
+
+}
+
+@media (max-width: 500px) {
+  .form {
+    &__field-login,
+    &__field-device-name,
+    &__field-password,
+    &__field-button,
+    &__field-button,
+    &__text-login,
+    &__text-device-name,
+    &__text-password {
+      margin-left: 10%;
+      width: 80%;
+      min-width: 80%;
+    }
+
+    &__show-password {
+      min-width: 80%;
+      margin-left: -20px;
+    }
+  }
+
+
+  .stores__App {
+    margin-left: 5%;
+  }
+
+
+}
+
+
